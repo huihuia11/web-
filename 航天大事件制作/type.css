@@ -1,0 +1,139 @@
+body{
+    background: url("images/bg.jpg") 50% 0;
+    font-family: sans-serif;
+    color: #FFF;
+    margin: 20px;
+    background-size: cover;
+}
+div{
+    position: relative;
+    height: 500px;
+}
+#slogan1{
+    padding-top: 30px;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s .5s;
+}
+#slogan1.show{
+    opacity: 1;
+}
+#slogan1 h1{
+    font-size: 81px;
+}
+#slogan1 p{
+    font-size: 28px;
+}
+#slogan2{
+     padding-top: 30px;
+     text-align: center;
+ }
+#slogan2 h1{
+    display: inline-block;
+    padding: 20px 0;
+    border-top: 5px solid #FFF;
+    border-bottom: 5px solid #FFF;
+    opacity: 0;
+    transform: scaleY(0);
+    transition: all 1s;
+
+}
+#slogan2 p{
+    margin-top: 10px;
+    font-size: 26px;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all 1s .5s;
+}
+#slogan2 h1.scrolled{
+    opacity: 1;
+    transform: scaleY(1);
+}
+#slogan2 p.scrolled{
+    opacity: 1;
+    transform: scaleX(1);
+}
+#slogan3 h1{
+    position: absolute;
+    font-size: 54px;
+    left: 5%;
+    top: 30px;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 1.5s;
+
+}
+#slogan3 p{
+    position: absolute;
+    font-size: 24px;
+    left: 5%;
+    width: 650px;
+    top: 150px;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: all 1.5s .25s;
+}
+#slogan3 img{
+    position: absolute;
+    left: 70%;
+    top: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: all 1.5s .5s;
+}
+#slogan4 h1{
+    position: absolute;
+    font-size: 42px;
+    left: 35%;
+    top: 20px;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: all 1.5s;
+}
+#slogan4 p{
+    position: absolute;
+    font-size: 24px;
+    left: 35%;
+    width: 650px;
+    top: 200px;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: all 1.5s .25s;
+}
+#slogan4 img{
+    position: absolute;
+    left: 5%;
+    top: 60px;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 1.5s .5s;
+}
+#slogan3 h1.scrolled,#slogan3 p.scrolled,#slogan3 img.scrolled,
+#slogan4 h1.scrolled,#slogan4 p.scrolled,#slogan4 img.scrolled{
+    opacity: 1;
+    transform: translateX(0px);
+}
+#slogan5 h1{
+    position: absolute;
+    font-size: 42px;
+    left: 35%;
+    top: 10px;
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: all 1.5s ;
+}
+#slogan5 p{
+    position: absolute;
+    font-size: 20px;
+    left: 15%;
+    width: 900px;
+    top: 120px;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 1.5s .25s;
+}
+#slogan5 h1.scrolled,#slogan5 p.scrolled{
+    opacity: 1;
+    transform: translateX(0px);
+}
