@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			h1{
+				font-size: 54px;
+				text-align: center;
+				margin: 20px;
+			}
+			footer{
+				font-family: sans-serif;
+				color: red;
+				margin: 20px;
+				text-align: center;
+			}
+			div{
+				display: flex;
+				flex-flow: row wrap;
+			}
+			img{
+				height: 400px;
+				flex: 1  auto;
+				border: 2px solid #fff;
+			}
+			img:hover{
+				opacity: 0.7;
+			}
+			@media screen and (max-width:500px) {
+				div{
+					flex-flow: column-reverse wrap; 
+				}
+				img{
+					100%
+				}
+				h1{
+					font-size: 36px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>珍惜粮食，拒绝浪费</h1>
+		<div>
+			<img id="pic1" src="images/pic1.jpg" alt="" />
+			<img id="pic2" src="images/pic2.jpg" alt="" />
+			<img id="pic3" src="images/pic3.jpg" alt="" />
+			<img id="pic4" src="images/pic4.jpg" alt="" />
+		</div>
+		<footer>勤俭节约，从我做起!</footer>
+	</body>
+</html>
