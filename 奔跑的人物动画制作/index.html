@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<script src="jquery-2.1.4.min.js"></script>
+		<style type="text/css">
+			html body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+			#myCanvas {
+				background-image: url(images/bg.png);
+				background-size: cover;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				var canvas = document.getElementById("myCanvas");
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+				var context = canvas.getContext("2d");
+				var sequence = [];
+				var frameCount = 1;
+				var frameTotal = 12;
+				var man = {};
+				man.vx = 0;
+				// man.vy = 0;
+				man.x = 50;
+				man.y = window.innerHeight - 410;
+				for (var i = 1; i <= frameTotal; i++) {
+					loadImg("images/run_" + i + ".png");
+				}
+
+				function loadImg(url) {
+					var img = new Image();
+					img.src = url;
+					sequence.push(img);
+				}
+
+				function run(e) {
+					man.x += man.vx;
+					// man.y += man.vy;
+					if (man.x > canvas.width) {
+						man.x = -300;
+						// man.y = window.innerHeight - 300;
+					}
+					if (man.x < -300) {
+						man.x = canvas.width;
+						// man.y = window.innerHeight - 600;
+					}
+					frameCount++;
+					if (frameCount >= frameTotal) {
+						frameCount = 1;
+					}
+					context.clearRect(0, 0, canvas.width, canvas.height);
+					context.drawImage(sequence[frameCount], man.x, man.y);
+				}
+				setInterval(run, 100);
+				document.onkeydown = function(e) {
+					if (e.keyCode === 68) {
+						man.vx = 50;
+						// man.vy = -10;
+					} else if (e.keyCode === 65) {
+						man.vx = -50;
+						// man.vy = 10;
+					}
+				};
+				document.onkeyup = function(e) {
+					man.vx = 0;
+					// man.vy = 0;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="myCanvas"></canvas>
+	</body>
+</html>
