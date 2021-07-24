@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(images/bg.jpg);
+	font-family: sans-serif;
+	color: rgba(255,255,2552.8);
+	text-align: center;
+}
+h1{
+	font-size: 42px;
+	margin: 30px auto;
+}
+#slideshow{
+	width: 480px;
+	height: 600px;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+}
+#slideshow ul,#slideshow ul li,#slideshow-nav
+{
+	list-style:none;
+	position: absolute;
+}
+#slideshow-nav{
+	width: 100%;
+	bottom: 420px;
+	text-align: center;
+}
+#slideshow-nav span{
+	display: inline-block;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	font-size: 0;
+	background: rgba(255,255,255,.3);
+	transition: all .5s;
+	margin: 0 7px;
+	font-size: 14px;
+	cursor: pointer;
+	user-select: none;
+}
+#slideshow-nav span.active{
+	background: red;
+}
