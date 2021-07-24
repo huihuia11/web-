@@ -1,0 +1,37 @@
+body{
+	background:#006b9b;
+}
+#verify{
+	width: 508px;
+	height: 523px;
+	background: url(bg.png);
+	margin: 50px auto;
+	position: relative;
+}
+#drag{
+	width: 171px;
+	height: 140px;
+	background: url(drag.png);
+	position: absolute;
+	top:185px;
+	left: 0px;
+}
+#dot{
+	width: 29px;
+	height: 29px;
+	background: url(dot.png);
+	position: absolute;
+	top:460px;
+	left:70px;
+}
+#success{
+	position: absolute;
+	display: none;
+	color: #fff;
+	font-size: 32px;
+	right: 0;
+	top:130px;
+	font-family: sans-serif;
+	background: #c33;
+	padding: 5px 20px;
+}

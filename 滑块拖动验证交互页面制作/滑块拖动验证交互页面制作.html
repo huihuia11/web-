@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="new_file.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div id="verify">
+			<div id="drag"></div>
+			<div id="dot"></div>
+			<p id="success">Success!</p>
+		</div>
+		<script type="text/javascript">
+			var max=350;
+			var final=158;
+			var buffer=7;
+			
+			var success=document.getElementById("success");
+			var dot=document.getElementById("dot");
+			var drag=document.getElementById("drag");
+			var dotStart=dot.offsetLeft;
+			drag.style.left=-Math.random()*200+drag.offsetLeft+"px";
+			var dragStart=drag.offsetLeft;
+			
+			dot.onmousedown=function(e){
+				var stsrtx=e.clientX;
+				var dotleft=dot.offsetLeft;
+				document.onmousemove=function(e){
+					var move=e.clientX-stsrtx;
+					var to=dotleft+move;
+					if(to>max+dotStart){
+						to=max+dotStart;
+					}else if(to<dotStart){
+						to=dotStart;
+					}
+					dot.style.left=to+'px';
+					drag.style.left=(dragStart+to-dotStart)+'px';
+				};
+				
+				document.onmouseup=function(e){
+				this.onmousemove=null;
+				if(Math.abs(drag.offsetLeft-final)<buffer){
+					success.style.display="block";
+				}else{
+					success.style.display="none";
+				}
+			}	
+			
+			};
+		</script>
+	</body>
+</html>
